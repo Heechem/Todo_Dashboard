@@ -1,0 +1,27 @@
+{
+  "name": "todo_list",
+  "version": "1.0.0",
+  "description": "Todo_list_Project",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Heechem/Todo_list.git"
+  },
+  "author": "Heechem",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Heechem/Todo_list/issues"
+  },
+  "homepage": "https://github.com/Heechem/Todo_list#readme",
+  "devDependencies": {
+    "webpack": "^5.76.3",
+    "webpack-cli": "^5.0.1"
+  },
+  "dependencies": {
+    "eslint-config-wesbos": "^3.2.3"
+  }
+}

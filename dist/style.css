@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Phudu&family=Roboto&display=swap');
+@import url('//db.onlinewebfonts.com/c/bb018e64d01355748d8ddc53553850b9?family=Cerebri+Sans');
+html {
+  font-size: 100%;
+  min-height: 100%;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  /* height: 100vh; */
+  /* overflow: auto; */
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Aside panel diplay */
+.aside_panel {
+  background-image: url(/doc/images/Metapolis.jpg);
+  box-shadow: 2px 0px 15px 2px rgb(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  color: #eee;
+  width: 20%;
+  border-radius: 8px;
+}
+
+aside .aside_first_li {
+  margin: 3rem 0;
+}
+
+aside li i {
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+aside li i:hover {
+  scale: 1.2;
+  margin: 8px;
+  transition: 0.3s ease-in-out;
+  color: #dd3e54;
+}
+
+aside li i:active {
+  scale: 0.92;
+}
+
+aside li i.done {
+  text-decoration: underline;
+}
+
+/* aside projects */
+
+aside .aside_project {
+  height: 100%;
+  width: 100%;
+
+  margin: 0;
+  position: relative;
+}
+
+.aside_project h3 i {
+  right: 0;
+  cursor: pointer;
+  position: absolute;
+}
+
+.aside_second_li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+  transition: 0.3s ease-in-out;
+  width: 100%;
+}
+/* .aside_second_li label {
+  display: none;
+} */
+
+.aside_second_li i {
+  margin-right: 25%;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.aside_second_li button {
+  /* From https://css.glass */
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-right: 0;
+  align-self: flex-end;
+}
+
+.aside_second_li button i {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+/* Hover effects of the project DIV */
+
+.aside_second_li:hover {
+  cursor: pointer;
+  color: #6be585;
+}
+
+.aside_second_li:active {
+  scale: 0.96;
+  transition: 0.3s ease-in-out;
+}
+
+.aside_second_li button:hover,
+.aside_project_title i:hover {
+  scale: 1.3;
+
+  transition: 0.3s ease-in-out;
+  color: #6be585;
+  margin: 6px;
+}
+
+.aside_second_li button:active {
+  scale: 0.92;
+}
+
+.aside_second_li input:checked {
+  accent-color: #dd3e54;
+}
+
+/* central container */
+
+.central_container {
+  background: #005aa7; /* fallback for old browsers */
+
+  background: linear-gradient(to right, #fffde4, #005aa7);
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  border-radius: 8px;
+
+  margin: 10px;
+  position: relative;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  flex-wrap: wrap;
+}
+
+/* Task container */
+
+.central_task_container {
+  position: absolute;
+  margin: 20px;
+  width: 60%;
+  flex-shrink: 1;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+
+  background: rgba(255, 255, 255, 0.24);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.9px);
+  -webkit-backdrop-filter: blur(5.9px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.central_task_container input,
+select {
+  padding: 10px 20px;
+  border: none;
+  width: 200px;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: 600;
+  transition: 0.3s ease-in;
+  margin: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+}
+
+.central_task_container input:focus,
+select:focus {
+  outline: none;
+  width: 300px;
+  margin: 25px;
+  transition: 0.5s ease-in;
+  color: #dd3e54;
+  text-align: center;
+}
+
+.central_task_container textarea {
+  height: 40px;
+  width: 200px;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+textarea:focus {
+  height: 100px;
+  width: 200px;
+  transition: 0.5s ease-in;
+  font-size: large;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  outline: none;
+  outline-color: transparent;
+  resize: none;
+  background: transparent;
+}
+
+form button {
+  margin: 10px;
+  background-color: #c2fbd7;
+  border-radius: 100px;
+  box-shadow: rgba(44, 187, 99, 0.2) 0 -25px 18px -14px inset,
+    rgba(44, 187, 99, 0.15) 0 1px 2px, rgba(44, 187, 99, 0.15) 0 2px 4px,
+    rgba(44, 187, 99, 0.15) 0 4px 8px, rgba(44, 187, 99, 0.15) 0 8px 16px,
+    rgba(44, 187, 99, 0.15) 0 16px 32px;
+  color: green;
+  cursor: pointer;
+  display: inline-block;
+
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: 16px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  box-shadow: rgba(44, 187, 99, 0.35) 0 -25px 18px -14px inset,
+    rgba(44, 187, 99, 0.25) 0 1px 2px, rgba(44, 187, 99, 0.25) 0 2px 4px,
+    rgba(44, 187, 99, 0.25) 0 4px 8px, rgba(44, 187, 99, 0.25) 0 8px 16px,
+    rgba(44, 187, 99, 0.25) 0 16px 32px;
+  transform: scale(1.05) rotate(-1deg);
+  transition: 0.3s ease;
+  scale: 1.1;
+}
+
+.task_card_container {
+  background: inherit;
+  position: absolute;
+
+  min-width: 100%;
+  height: 100%;
+  transform: translateY(50%);
+  /* margin-top: 30px; */
+  display: flex;
+  /* align-content: center; */
+  flex-wrap: wrap;
+
+  overflow: hidden;
+  /* flex: 1; */
+}
+
+.task_card {
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  height: 350px;
+  width: 350px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.task_card.hidden {
+  display: none;
+}
+
+.task_card ul {
+  margin-bottom: 10px;
+  list-style-type: none;
+  font-size: large;
+  font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+}
+
+.task_card button.task_delete {
+  margin: 10px;
+  background-color: #ff1f71;
+  border-radius: 100px;
+  box-shadow: #ff1f71 0 -25px 18px -14px inset, #ff1f71 0 1px 2px,
+    #ff1f71 0 2px 4px, #ff1f71 0 4px 8px, #ff1f71 0 8px 16px,
+    (#ff1f71) 0 16px 32px;
+  color: #c2fbd7;
+  cursor: pointer;
+
+  padding: 7px 20px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 250ms;
+  border: 0;
+  font-size: x-large;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  transition: 0.3s ease-in-out;
+}
+
+.task_card textarea {
+  margin-top: 15px;
+  height: 100px;
+  width: 200px;
+  transition: 0.5s ease-in;
+  font-size: large;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  outline: hidden;
+
+  resize: none;
+  background: transparent;
+  border-radius: 20px;
+}
+
+.task_card ul li {
+  margin: 8px;
+}
