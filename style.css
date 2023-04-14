@@ -25,7 +25,7 @@ body {
 
 /* Aside panel diplay */
 .aside_panel {
-  background: linear-gradient(to bottom, #c6ffdd, #fbd786, #f7797d);
+  background: linear-gradient(to bottom, #659999, #f4791f);
   box-shadow: 2px 0px 15px 2px rgb(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
